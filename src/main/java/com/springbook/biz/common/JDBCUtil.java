@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-//Mybatis 같은 프레임워크를 사용하기 전까지는 DB 연동 처리를 JDBC로 할 것이다.
-//따라서 모든 DAO 클래스에서 공통으로 사용할 JDBCUtil 클래스를 작성하여 Connection 획득과 해제 작업을 공통으로 처리하도록 한다.
+// Mybatis 같은 프레임워크를 사용하기 전까지는 DB 연동 처리를 JDBC로 할 것이다.
+// 따라서 모든 DAO 클래스에서 공통으로 사용할 JDBCUtil 클래스를 작성하여 Connection 획득과 해제 작업을 공통으로 처리하도록 한다.
 public class JDBCUtil {
 
 	public static Connection getConnection() {
