@@ -26,8 +26,6 @@ public class BoardServiceClient {
 			System.out.println("---> " + board.toString());
 		} // 5. Spring 컨테이너 종료 container.close();
 
-		// 2. Spring 컨테이너로부터 BoardServiceImpl 객체를 Lookup한다.
-
 	}
 
 }
