@@ -1,6 +1,8 @@
 package com.springbook.biz.board;
 
 import java.sql.Date;
+
+import org.springframework.web.multipart.MultipartFile;
 //레이어와 레이어 사이에서 관련된 데이터를 한꺼번에 주고받을 목적으로 사용하는 클래스. "데이터 전달"이 목적.
 public class BoardVO {
 	//Board DB테이블에 포함된 칼럼과 같은 이름의 멤버 변수를 private 접근제한자로 선언한다.
@@ -17,6 +19,9 @@ public class BoardVO {
 	private String content;
 	private Date regDate;
 	private int cnt;
+	private String searchCondition;
+	private String searchKeyword;
+	private MultipartFile uploadFile;
 	
 	//그리고 private 멤버변수에 접근하는 Getter/Setter 메소드를 선언하면 VO 클래스는 끝.
 	public int getSeq() {
@@ -55,7 +60,24 @@ public class BoardVO {
 	public void setCnt(int cnt) {
 		this.cnt = cnt;
 	}
-	
+	public String getSearchCondition() {
+		return searchCondition;
+	}
+	public void setSearchCondition(String searchCondition) {
+		this.searchCondition = searchCondition;
+	}
+	public String getSearchKeyword() {
+		return searchKeyword;
+	}
+	public void setSearchKeyword(String searchKeyword) {
+		this.searchKeyword = searchKeyword;
+	}
+	public MultipartFile getUploadFile() {
+		return uploadFile;
+	}
+	public void setUploadFile(MultipartFile uploadFile) {
+		this.uploadFile = uploadFile;
+	}
 	@Override
 	public String toString() {
 		return "BoardVO [seq=" + seq + ", title=" + title + ", writer=" + writer + ", content=" + content + ", regDate="
