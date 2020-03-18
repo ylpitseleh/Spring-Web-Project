@@ -31,6 +31,9 @@ public class BoardController {
 			String fileName = uploadFile.getOriginalFilename();
 			uploadFile.transferTo(new File("D:/" + fileName));
 		}
+		System.out.println("번호 : " + vo.getSeq());
+		System.out.println("제목 : " + vo.getTitle());
+		System.out.println("내용 : " + vo.getContent());
 		
 		boardService.insertBoard(vo);
 		return "getBoardList.do";
@@ -39,6 +42,10 @@ public class BoardController {
 	// 글 수정
 	@RequestMapping("/updateBoard.do")
 	public String updateBoard(@ModelAttribute("board") BoardVO vo) {			
+		System.out.println("번호 : " + vo.getSeq());
+		System.out.println("제목 : " + vo.getTitle());
+		System.out.println("내용 : " + vo.getContent());
+		
 		boardService.updateBoard(vo);
 		return "getBoardList.do";
 	}

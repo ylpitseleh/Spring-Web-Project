@@ -4,6 +4,6 @@ public interface UserService {
 
 	// CRUD 기능은 메소드 구현
 	// 회원 등록
-	UserVO getUser(UserVO vo);
+	public UserVO getUser(UserVO vo);
 
 }

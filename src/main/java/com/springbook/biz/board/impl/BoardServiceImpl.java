@@ -13,7 +13,7 @@ import com.springbook.biz.board.BoardVO;
 public class BoardServiceImpl implements BoardService{
 	//BoardDAO 타입의 객체를 의존성 주입하기 위해서 @Autowired 설정.
 	@Autowired
-	private BoardDAOSpring boardDAO;
+	private BoardDAO boardDAO;
 
 	// 글 등록
 	public void insertBoard(BoardVO vo) {
